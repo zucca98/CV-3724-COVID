@@ -1,0 +1,7 @@
+Model,Accuracy,Precision,Recall,Specificity,F1,AUC-ROC,AUC-PR,Brier,Note
+Random Forest (HOG+LBP+GLCM),0.8874,0.8967,0.8777,-,0.8871,0.9516,-,-,
+"SVM (HOG+LBP+GLCM, PCA-200)",0.9625,0.9579,0.9681,-,0.9630,0.9963,-,-,
+EfficientNet-B0 (fine-tuned),0.9330,0.9454,0.9202,-,0.9326,0.9812,-,-,full training
+EfficientNet-B0 + T-scaling (T=1.002),0.9115,0.8974,0.9309,-,0.9138,0.9812,-,-,thr=0.358 (sens>=0.95)
+EfficientNet-B0 + TTA (5 views),0.9437,0.9465,0.9415,-,0.9440,0.9895,-,-,"deterministic views, thr=0.50"
+EfficientNet-B0 + Ensemble (x3),-,-,-,-,-,-,-,-,future work

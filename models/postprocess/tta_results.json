@@ -1,0 +1,11 @@
+{
+  "arch": "efficientnet_b0",
+  "n_views": 5,
+  "apply_lung_mask": true,
+  "threshold": 0.5,
+  "test_accuracy": 0.9436997319034852,
+  "test_precision": 0.946524064171123,
+  "test_recall": 0.9414893617021277,
+  "test_f1": 0.944,
+  "test_roc_auc": 0.9895054629097182
+}

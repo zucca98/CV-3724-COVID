@@ -1,0 +1,32 @@
+# Runtime dependencies for the COVID-CT classification project.
+# Mirrors the [project.dependencies] block in pyproject.toml.
+# For CPU-only PyTorch (laptop/CI), prepend the CPU index:
+#   pip install --index-url https://download.pytorch.org/whl/cpu torch torchvision
+# Then install the rest with: pip install -r requirements.txt
+
+# Deep learning
+torch>=2.0
+torchvision
+timm
+
+# Image processing
+albumentations>=2.0
+opencv-python
+scikit-image
+scikit-learn
+
+# Explainability and segmentation
+grad-cam
+lungmask
+
+# Data, IO, and visualisation
+matplotlib
+seaborn
+pandas
+tqdm
+numpy
+pyyaml
+
+# Dev (uncomment to install)
+# pytest
+# pytest-cov

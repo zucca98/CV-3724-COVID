@@ -1,0 +1,46 @@
+# Python
+__pycache__/
+*.py[cod]
+*.egg-info/
+*.egg
+.pytest_cache/
+.coverage
+htmlcov/
+
+# Virtual environments
+.venv/
+venv/
+env/
+
+# Data and trained model artefacts (not under version control)
+data/
+sarscov2-ctscan-dataset/
+*.pth
+*.pkl
+*.npz
+*.h5
+
+# Logs
+logs/*.log
+logs/pip-*.log
+
+# IDE
+.vscode/
+.idea/
+*.swp
+*.swo
+
+# OS
+.DS_Store
+Thumbs.db
+
+# Build artifacts
+build/
+dist/
+*.spec
+
+# Notebook checkpoints
+.ipynb_checkpoints/
+
+# Personal study notes for the oral exam (not part of the deliverable)
+studio_orale/

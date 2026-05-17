@@ -1,0 +1,15 @@
+.venv/
+.git/
+.github/
+.pytest_cache/
+__pycache__/
+*.pyc
+data/
+sarscov2-ctscan-dataset/
+*.pth
+*.npz
+docs/figures/
+docs/*.pdf
+logs/*.log
+notebooks/
+.vscode/

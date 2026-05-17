@@ -1,0 +1,45 @@
+data:
+  raw_dir: sarscov2-ctscan-dataset
+  processed_dir: data/processed
+  splits:
+    train: 0.70
+    val: 0.15
+    test: 0.15
+  seed: 42
+
+preprocessing:
+  target_size: 224         # square output side in pixels
+  apply_lung_mask: true    # uses U-Net lungmask if installed, else Otsu fallback
+  clahe_clip_limits: [2.0, 4.0]   # channels 1 and 2 of the 3-channel composite
+  augmentation:
+    horizontal_flip: 0.5
+    vertical_flip: 0.0     # forbidden — anatomically incorrect for chest CT
+    rotation_deg: 10       # ≤ ±15° per project constraints
+    brightness_contrast_p: 0.5
+    affine_scale: [0.9, 1.1]
+    gauss_noise_p: 0.5
+  norm_stats_path: configs/norm_stats.json
+
+model:
+  arch: efficientnet_b0
+  num_classes: 2
+  pretrained: true
+  dropout: 0.5
+
+training:
+  batch_size: 32
+  epochs_phase1: 10
+  epochs_phase2: 30
+  lr_phase1: 1.0e-3
+  lr_phase2: 1.0e-5
+  weight_decay: 1.0e-4
+  early_stopping_patience: 7
+  use_amp: true       # auto-disabled on CPU
+  num_workers: 0      # 0 = safe on Windows; set 4+ on Linux/Colab GPU runs
+
+evaluation:
+  decision_threshold: 0.5    # used by default predictors; calibrated threshold tuned separately
+  target_sensitivity: 0.95   # COVID recall target for threshold tuning
+  ece_n_bins: 10
+  tta_n_views: 5
+  ensemble_top_k: 3

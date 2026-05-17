@@ -1,0 +1,10 @@
+{
+  "arch": "efficientnet_b0",
+  "subset": null,
+  "apply_lung_mask": true,
+  "test_accuracy": 0.9329758713136729,
+  "test_precision": 0.9453551912568307,
+  "test_recall": 0.9202127659574468,
+  "test_f1": 0.9326145552560647,
+  "test_roc_auc": 0.9811673375503164
+}

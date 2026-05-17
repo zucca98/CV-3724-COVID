@@ -1,0 +1,24 @@
+{
+  "arch": "efficientnet_b0",
+  "checkpoint": "models\\deep\\best_model.pth",
+  "temperature": 1.0020734071731567,
+  "threshold": 0.3583375811576843,
+  "target_sensitivity": 0.95,
+  "apply_lung_mask": true,
+  "raw_metrics": {
+    "accuracy": 0.9329758713136729,
+    "precision": 0.9453551912568307,
+    "recall": 0.9202127659574468,
+    "f1": 0.9326145552560647,
+    "roc_auc": 0.9811673375503164,
+    "threshold": 0.5
+  },
+  "calibrated_metrics": {
+    "accuracy": 0.9115281501340483,
+    "precision": 0.8974358974358975,
+    "recall": 0.9308510638297872,
+    "f1": 0.9138381201044387,
+    "roc_auc": 0.9811673375503164,
+    "threshold": 0.3583375811576843
+  }
+}

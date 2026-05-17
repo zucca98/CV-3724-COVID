@@ -1,0 +1,46 @@
+[build-system]
+requires = ["setuptools>=68"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "covid-ct-classification"
+version = "0.1.0"
+requires-python = ">=3.10"
+dependencies = [
+    # PyTorch: install from https://pytorch.org for GPU support
+    "torch>=2.0",
+    "torchvision",
+    "timm",
+    # Image processing
+    "albumentations",
+    "opencv-python",
+    "scikit-image",
+    "scikit-learn",
+    # Explainability
+    "grad-cam",        # pytorch-grad-cam
+    "lungmask",
+    # Data / viz
+    "matplotlib",
+    "seaborn",
+    "pandas",
+    "tqdm",
+    "numpy",
+    "pyyaml",
+]
+
+[project.optional-dependencies]
+dev = ["pytest", "pytest-cov"]
+# docs: scripts/build_report_pdf.py (markdown-pdf) + executing notebooks/04_results.ipynb
+# headless (nbconvert needs a kernel, hence ipykernel) to regenerate the comparison table.
+docs = ["markdown-pdf", "nbconvert", "ipykernel"]
+
+[tool.setuptools.packages.find]
+where = ["."]
+include = ["src*", "scripts*"]
+
+[tool.pytest.ini_options]
+testpaths = ["tests"]
+filterwarnings = [
+    "ignore:builtin type SwigPy.* has no __module__ attribute:DeprecationWarning",
+    "ignore:builtin type swigvarlink has no __module__ attribute:DeprecationWarning",
+]

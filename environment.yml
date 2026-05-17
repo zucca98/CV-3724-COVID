@@ -1,0 +1,26 @@
+name: covid-ct
+channels:
+  - pytorch
+  - conda-forge
+  - defaults
+dependencies:
+  - python=3.12
+  - pytorch>=2.0
+  - torchvision
+  - scikit-learn
+  - scikit-image
+  - matplotlib
+  - seaborn
+  - pandas
+  - tqdm
+  - numpy
+  - pyyaml
+  - pytest
+  - pytest-cov
+  - pip
+  - pip:
+      - timm
+      - albumentations
+      - opencv-python
+      - grad-cam
+      - lungmask

@@ -1,0 +1,28 @@
+{
+  "svm": {
+    "best_params": {
+      "svm__C": 100,
+      "svm__gamma": "scale"
+    },
+    "cv_roc_auc": 0.985258344009935,
+    "train_time_s": 143.2,
+    "accuracy": 0.9624664879356568,
+    "precision": 0.9578947368421052,
+    "recall": 0.9680851063829787,
+    "f1": 0.9629629629629629,
+    "roc_auc": 0.9963484761357102
+  },
+  "random_forest": {
+    "best_params": {
+      "max_depth": null,
+      "n_estimators": 500
+    },
+    "cv_roc_auc": 0.9414966593704861,
+    "train_time_s": 114.7,
+    "accuracy": 0.8873994638069705,
+    "precision": 0.8967391304347826,
+    "recall": 0.8776595744680851,
+    "f1": 0.8870967741935484,
+    "roc_auc": 0.9515813686026453
+  }
+}
