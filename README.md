@@ -5,7 +5,7 @@
 > It is **NOT validated for clinical use** and must **NOT** be used for medical
 > diagnosis, triage, or treatment decisions.
 
-[![CI](https://github.com/zucca98/progetto-computer-vision-s00003724/actions/workflows/ci.yml/badge.svg)](https://github.com/zucca98/progetto-computer-vision-s00003724/actions/workflows/ci.yml)
+[![CI](https://github.com/zucca98/CV-3724-COVID/actions/workflows/ci.yml/badge.svg)](https://github.com/zucca98/CV-3724-COVID/actions/workflows/ci.yml)
 ![Python](https://img.shields.io/badge/python-3.12-blue)
 ![PyTorch](https://img.shields.io/badge/PyTorch-2.x-orange)
 ![License](https://img.shields.io/badge/license-MIT-green)
@@ -42,8 +42,8 @@ and CPU-only PyTorch wheels used for the reported results).
 
 ```bash
 # 1. Clone
-git clone https://github.com/zucca98/progetto-computer-vision-s00003724.git
-cd progetto-computer-vision-s00003724
+git clone https://github.com/zucca98/CV-3724-COVID.git
+cd CV-3724-COVID
 
 # 2. Create venv and install (Python 3.12 recommended)
 python -m venv .venv
@@ -60,8 +60,8 @@ toolchain required - only Docker.
 
 ```bash
 # 1. Clone
-git clone https://github.com/zucca98/progetto-computer-vision-s00003724.git
-cd progetto-computer-vision-s00003724
+git clone https://github.com/zucca98/CV-3724-COVID.git
+cd CV-3724-COVID
 
 # 2. Build the image (~5 min the first time, layers are cached afterwards)
 docker build -t covid-ct .
@@ -132,7 +132,7 @@ unzip sarscov2-ctscan-dataset.zip
 ## Repository Structure
 
 ```text
-progetto-cv/
+CV-3724-COVID/
 ├── configs/
 │   └── default.yaml             # All hyperparameters
 ├── data/processed/              # Generated train/val/test CSVs + NPZ features
@@ -214,12 +214,12 @@ without retraining (~4 h), download it from the GitHub Release:
 mkdir -p models/deep
 
 # With the GitHub CLI:
-gh release download v0.1.0 --repo zucca98/progetto-computer-vision-s00003724 \
+gh release download v0.1.0 --repo zucca98/CV-3724-COVID \
     --pattern best_model.pth --dir models/deep
 
 # Or with curl:
 curl -L -o models/deep/best_model.pth \
-  https://github.com/zucca98/progetto-computer-vision-s00003724/releases/download/v0.1.0/best_model.pth
+  https://github.com/zucca98/CV-3724-COVID/releases/download/v0.1.0/best_model.pth
 ```
 
 ### Post-processing (CPU, requires a trained deep checkpoint)
@@ -247,7 +247,7 @@ streamlit run app/demo.py
 
 ## Google Colab
 
-[![Open in Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/github/zucca98/progetto-computer-vision-s00003724/blob/main/notebooks/03_train_colab.ipynb)
+[![Open in Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/github/zucca98/CV-3724-COVID/blob/main/notebooks/03_train_colab.ipynb)
 
 ---
 

@@ -5,7 +5,7 @@
 > **NON e' validato per uso clinico** e **NON deve** essere impiegato per
 > diagnosi mediche, triage o decisioni terapeutiche.
 
-[![CI](https://github.com/zucca98/progetto-computer-vision-s00003724/actions/workflows/ci.yml/badge.svg)](https://github.com/zucca98/progetto-computer-vision-s00003724/actions/workflows/ci.yml)
+[![CI](https://github.com/zucca98/CV-3724-COVID/actions/workflows/ci.yml/badge.svg)](https://github.com/zucca98/CV-3724-COVID/actions/workflows/ci.yml)
 ![Python](https://img.shields.io/badge/python-3.12-blue)
 ![PyTorch](https://img.shields.io/badge/PyTorch-2.x-orange)
 ![License](https://img.shields.io/badge/license-MIT-green)
@@ -44,8 +44,8 @@ usati per i risultati riportati).
 
 ```bash
 # 1. Clonazione
-git clone https://github.com/zucca98/progetto-computer-vision-s00003724.git
-cd progetto-computer-vision-s00003724
+git clone https://github.com/zucca98/CV-3724-COVID.git
+cd CV-3724-COVID
 
 # 2. Ambiente virtuale e installazione (Python 3.12 consigliato)
 python -m venv .venv
@@ -62,8 +62,8 @@ editable). Non serve alcuna toolchain Python locale - solo Docker.
 
 ```bash
 # 1. Clonazione
-git clone https://github.com/zucca98/progetto-computer-vision-s00003724.git
-cd progetto-computer-vision-s00003724
+git clone https://github.com/zucca98/CV-3724-COVID.git
+cd CV-3724-COVID
 
 # 2. Build dell'immagine (~5 min la prima volta, poi i layer sono in cache)
 docker build -t covid-ct .
@@ -136,7 +136,7 @@ unzip sarscov2-ctscan-dataset.zip
 ## Struttura del repository
 
 ```text
-progetto-cv/
+CV-3724-COVID/
 ├── configs/
 │   └── default.yaml             # Tutti gli iperparametri
 ├── data/processed/              # CSV train/val/test + feature NPZ generati
@@ -222,12 +222,12 @@ post-processing senza riaddestrare (~4 h), scaricarlo dalla GitHub Release:
 mkdir -p models/deep
 
 # Con la GitHub CLI:
-gh release download v0.1.0 --repo zucca98/progetto-computer-vision-s00003724 \
+gh release download v0.1.0 --repo zucca98/CV-3724-COVID \
     --pattern best_model.pth --dir models/deep
 
 # Oppure con curl:
 curl -L -o models/deep/best_model.pth \
-  https://github.com/zucca98/progetto-computer-vision-s00003724/releases/download/v0.1.0/best_model.pth
+  https://github.com/zucca98/CV-3724-COVID/releases/download/v0.1.0/best_model.pth
 ```
 
 ### Post-processing (CPU, richiede checkpoint deep gia' addestrato)
@@ -255,7 +255,7 @@ streamlit run app/demo.py
 
 ## Google Colab
 
-[![Open in Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/github/zucca98/progetto-computer-vision-s00003724/blob/main/notebooks/03_train_colab.ipynb)
+[![Open in Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/github/zucca98/CV-3724-COVID/blob/main/notebooks/03_train_colab.ipynb)
 
 ---
 
